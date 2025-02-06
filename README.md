@@ -1,5 +1,5 @@
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=ED7796&vCenter=true&repeat=false&lines=%F0%9F%91%8B+Hi+there%2C+I'm+Lu+Ao!)](https://git.io/typing-svg)
-# Me
+  
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=ED7796&background=282A3500&vCenter=true&repeat=false&width=300&lines=%F0%9F%91%8B+Hi+there%2C+I'm+Lu+Ao!)](https://git.io/typing-svg)
 - 🔬 I'm a researcher studying the genetics of uveitis
 - 🧬 Our team do GWAS and AI application
 - 🌳 This is my GitHub status  
