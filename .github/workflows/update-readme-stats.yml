@@ -15,24 +15,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 1. Stats Card
+      # 1. Stats Card - Optimized for wide layout & compressed height
       - name: Generate stats card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          # Show everything (Stars, Contribs, Rank) to increase height to match adjacent card
-          # Exclude the fork repo to avoid skewing stats if needed (though stats usually exclude forks by default)
-          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&theme=dracula&exclude_repo=MungeSumstats_ModifedLocalChain
+          # hide_rank=true makes it a wide banner (compressed height)
+          # show_icons=true for visual appeal
+          # exclude_repo to filter out the fork skews
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_rank=true&count_private=true&theme=dracula&exclude_repo=MungeSumstats_ModifedLocalChain
           path: profile/stats.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
-      # 2. Top Langs
+      # 2. Top Langs - Compact multi-column layout
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          # Use layout=compact (no bars) and 8 langs to force multi-column layout (multiple langs per line)
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&count_private=true&theme=dracula&exclude_repo=MungeSumstats_ModifedLocalChain
+          # layout=compact with 10 langs allows it to potentially split into columns and look "wide"
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=10&count_private=true&theme=dracula&exclude_repo=MungeSumstats_ModifedLocalChain
           path: profile/top-langs.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
@@ -40,7 +41,6 @@ jobs:
       - name: Generate streak stats
         run: |
           mkdir -p profile
-          # Note: Streak stats relies on public profile visibility for contributions
           curl -fL -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=dracula&hide_border=true" || echo "Streak Stats generation failed"
 
       # 4. Snake Animation
@@ -50,6 +50,8 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             profile/snake.svg?color_snake=#ff79c6&color_dots=#282a36,#44475a,#6272a4,#bd93f9,#ff79c6
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
         run: |
@@ -57,5 +59,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
           git add profile/*.svg
-          git commit -m "style: Adjust snake colors (Dracula), hide contribs in stats" || exit 0
+          git commit -m "style: Optimize for wide layout and compressed height" || exit 0
           git push

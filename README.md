@@ -1,21 +1,25 @@
-  
+
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=428AE0&background=282A3500&vCenter=true&repeat=false&width=300&lines=%F0%9F%91%8B+Hi+there%2C+I'm+Lu+Ao!)](https://git.io/typing-svg)
 - 🔬 I'm a researcher studying the genetics of uveitis
 - 🧬 Our team do GWAS and AI application
+
 ### 🛠️ Languages and Tools
 <p align="left"> 
   <a href="https://skillicons.dev"> 
-    <img src="https://skillicons.dev/icons?i=r,py,bash,linux,git,vscode,github,gmail,ai,au,notion,apple&theme=dark" /> 
+    <img src="https://skillicons.dev/icons?i=r,py,rstudio,latex,bash,linux,git,vscode,au,github,gmail,ai,notion,apple&theme=dark" /> 
   </a> 
 </p>
 
 ### 📊 GitHub Analytics
-<img src="./profile/streak.svg" alt="Streak" width="95%">
-
-<p align="left">
-  <img src="./profile/stats.svg" alt="Stats" width="75%">
-  <img src="./profile/top-langs.svg" alt="Top Langs" width="20%">
+<p align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=laleoarrow&theme=dracula&no-frame=true&column=4" alt="Trophies" /></a>
 </p>
+
+<img src="./profile/streak.svg" alt="Streak" width="100%">
+
+<img src="./profile/stats.svg" alt="Stats" width="100%">
+
+<img src="./profile/top-langs.svg" alt="Top Langs" width="100%">
 
 ### 🐍 Contribution History
 
