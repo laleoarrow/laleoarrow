@@ -22,6 +22,15 @@
 <img src="./profile/snake.svg" alt="Snake" width="100%">
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=428AE0&background=282A3500&vCenter=true&repeat=false&width=300&lines=%F0%9F%93%AE+Contact)](https://git.io/typing-svg)
-**[ResearchGate](https://www.researchgate.net/profile/Ao-Lu-3)** **|**  **[ORCID](https://orcid.org/0009-0001-0927-4468)** **|**  
 
-![Static Badge](https://img.shields.io/badge/laleoarrow-blue)
+<p align="left">
+  <a href="https://www.researchgate.net/profile/Ao-Lu-3">
+    <img src="https://img.shields.io/badge/ResearchGate-00CCBB?style=for-the-badge&logo=ResearchGate&logoColor=white" alt="ResearchGate" />
+  </a>
+  <a href="https://orcid.org/0009-0001-0927-4468">
+    <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=ORCID&logoColor=white" alt="ORCID" />
+  </a>
+   <a href="https://github.com/laleoarrow">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</p>
