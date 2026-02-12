@@ -20,9 +20,9 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          # hide=contribs removes "Contributed to" line to reduce height
-          # include_all_commits=true counts commits in forks/other repos? User wants NO forks.
-          options: username=${{ github.repository_owner }}&show_icons=true&hide=stars,contribs&count_private=true&theme=dracula
+          # Show everything (Stars, Contribs, Rank) to increase height to match adjacent card
+          # Exclude the fork repo to avoid skewing stats if needed (though stats usually exclude forks by default)
+          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&theme=dracula&exclude_repo=MungeSumstats_ModifedLocalChain
           path: profile/stats.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
@@ -31,9 +31,8 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          # Use layout=compact to significantly reduce height (no progress bars)
-          # Increase langs_count to 6 to fill the vertical space better against the Stats card
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&count_private=true&theme=dracula
+          # Use layout=compact (no bars) and 6 langs to match the ~5-6 lines of the full Stats card
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&count_private=true&theme=dracula&exclude_repo=MungeSumstats_ModifedLocalChain
           path: profile/top-langs.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
