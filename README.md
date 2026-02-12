@@ -13,8 +13,6 @@
 ### 📊 GitHub Analytics
 <div align="center">
   <img src="./profile/streak.svg" alt="Streak" width="90%" />
-  <br/><br/>
-  <img src="./profile/top-langs.svg" alt="Top Langs" width="90%" />
 </div>
 
 ### 🐍 Contribution History
