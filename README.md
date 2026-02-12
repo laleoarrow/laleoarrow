@@ -5,7 +5,7 @@
 ### 🛠️ Languages and Tools
 <p align="left"> 
   <a href="https://skillicons.dev"> 
-    <img src="https://skillicons.dev/icons?i=r,py,bash,linux,git,vscode,github,gmail,ai,,au, notion,apple&theme=dark" /> 
+    <img src="https://skillicons.dev/icons?i=r,py,bash,linux,git,vscode,github,gmail,ai,au,notion,apple&theme=dark" /> 
   </a> 
 </p>
 
