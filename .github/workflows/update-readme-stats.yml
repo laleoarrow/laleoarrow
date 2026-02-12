@@ -13,17 +13,16 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
 
-      # 1. Stats Card (配置了 count_private=true 和 Token fallback)
+      # 1. Stats Card
       - name: Generate stats card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          # count_private=true 让它尝试统计私有库
-          options: username=${{ github.repository_owner }}&show_icons=true&hide=stars&hide_rank=true&theme=dracula&count_private=true
+          # Remove hide_rank=true to make it taller, matching non-compact top-langs better
+          options: username=${{ github.repository_owner }}&show_icons=true&hide=stars&count_private=true&theme=dracula
           path: profile/stats.svg
-          # 优先使用 PAT (Personal Access Token)，没有则用默认 Token
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
       # 2. Top Langs
@@ -31,28 +30,34 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&theme=dracula&count_private=true
+          # Remove layout=compact to show full progress bars (taller)
+          options: username=${{ github.repository_owner }}&langs_count=5&count_private=true&theme=dracula
           path: profile/top-langs.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
-      # 3. Streak Stats (使用 curl 下载 SVG 变静态文件)
+      # 3. Streak Stats
       - name: Generate streak stats
         run: |
-          # 这里的 & 符号在 shell 命令中需要转义或者用引号
-          curl -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=dracula&hide_border=true"
+          mkdir -p profile
+          # Note: Streak stats relies on public profile visibility for contributions
+          curl -fL -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=dracula&hide_border=true" || echo "Streak Stats generation failed"
 
-      # 4. Snake Animation (贪吃蛇)
+      # 4. Snake Animation
       - name: Generate snake animation
         uses: platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             profile/snake.svg?palette=github-dark
+        env:
+          # Use PAT to access private contributions if available
+          GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
           git add profile/*.svg
-          git commit -m "Update profile stats, snake, and streak" || exit 0
+          git commit -m "Update profile stats, snake (with PAT), and streak" || exit 0
           git push
