@@ -1,23 +1,22 @@
+<div align="left">
+  <img src="./profile/streak.svg" alt="Streak" width="100%" />
+</div>
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=428AE0&background=282A3500&vCenter=true&repeat=false&width=300&lines=%F0%9F%91%8B+Hi+there%2C+I'm+Lu+Ao!)](https://git.io/typing-svg)
 - 🔬 I'm a researcher studying the genetics of uveitis
 - 🧬 Our team do GWAS and AI application
 
 ### 🛠️ Languages and Tools
-<div align="left"> 
+<div> 
   <a href="https://skillicons.dev"> 
     <img src="https://skillicons.dev/icons?i=r,py,bash,linux,git,vscode,github,gmail,ai,au,notion,apple&theme=dark" /> 
   </a> 
 </div>
 
-### 📊 GitHub Analytics
-<div align="left">
-  <img src="./profile/streak.svg" alt="Streak" width="90%" />
-</div>
 
 ### 🐍 Contribution History
 <div align="left">
-  <img src="./profile/snake.svg" alt="Snake" width="90%" />
+  <img src="./profile/snake.svg" alt="Snake" width="100%" />
 </div>
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=428AE0&background=282A3500&vCenter=true&repeat=false&width=300&lines=%F0%9F%93%AE+Contact)](https://git.io/typing-svg)
