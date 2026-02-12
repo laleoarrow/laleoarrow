@@ -11,19 +11,16 @@
 </p>
 
 ### 📊 GitHub Analytics
-<p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=laleoarrow&theme=dracula&no-frame=true&column=4" alt="Trophies" /></a>
-</p>
-
-<img src="./profile/streak.svg" alt="Streak" width="100%">
-
-<img src="./profile/stats.svg" alt="Stats" width="100%">
-
-<img src="./profile/top-langs.svg" alt="Top Langs" width="100%">
+<div align="center">
+  <img src="./profile/streak.svg" alt="Streak" width="90%" />
+  <br/><br/>
+  <img src="./profile/top-langs.svg" alt="Top Langs" width="90%" />
+</div>
 
 ### 🐍 Contribution History
-
-<img src="./profile/snake.svg" alt="Snake" width="100%">
+<div align="center">
+  <img src="./profile/snake.svg" alt="Snake" width="90%" />
+</div>
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=428AE0&background=282A3500&vCenter=true&repeat=false&width=300&lines=%F0%9F%93%AE+Contact)](https://git.io/typing-svg)
 
