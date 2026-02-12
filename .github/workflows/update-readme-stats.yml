@@ -31,10 +31,9 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          # layout=compact? User wants height match. Stats has 3 lines (Commits, PRs, Issues).
-          # Added exclude_repo for pinned fork if needed, but for now relying on default.
-          # Reduce langs_count to 4 to try and match height with the shorter stats card
-          options: username=${{ github.repository_owner }}&langs_count=4&count_private=true&theme=dracula
+          # Use layout=compact to significantly reduce height (no progress bars)
+          # Increase langs_count to 6 to fill the vertical space better against the Stats card
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&count_private=true&theme=dracula
           path: profile/top-langs.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
