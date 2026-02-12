@@ -31,8 +31,8 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          # Use layout=compact (no bars) and 6 langs to match the ~5-6 lines of the full Stats card
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&count_private=true&theme=dracula&exclude_repo=MungeSumstats_ModifedLocalChain
+          # Use layout=compact (no bars) and 8 langs to force multi-column layout (multiple langs per line)
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&count_private=true&theme=dracula&exclude_repo=MungeSumstats_ModifedLocalChain
           path: profile/top-langs.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 

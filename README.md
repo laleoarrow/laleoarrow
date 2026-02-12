@@ -5,16 +5,16 @@
 ### 🛠️ Languages and Tools
 <p align="left"> 
   <a href="https://skillicons.dev"> 
-    <img src="https://skillicons.dev/icons?i=r,py,bash,linux,git,vscode,au,github,gmail,ai,notion,apple&theme=dark" /> 
+    <img src="https://skillicons.dev/icons?i=r,py,bash,linux,git,vscode,github,gmail,ai,,au, notion,apple&theme=dark" /> 
   </a> 
 </p>
 
 ### 📊 GitHub Analytics
-<img src="./profile/streak.svg" alt="Streak" width="98%">
+<img src="./profile/streak.svg" alt="Streak" width="95%">
 
 <p align="left">
-  <img src="./profile/stats.svg" alt="Stats" width="48%">
-  <img src="./profile/top-langs.svg" alt="Top Langs" width="48%">
+  <img src="./profile/stats.svg" alt="Stats" width="75%">
+  <img src="./profile/top-langs.svg" alt="Top Langs" width="20%">
 </p>
 
 ### 🐍 Contribution History
