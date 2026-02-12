@@ -10,12 +10,12 @@
 </p>
 
 ### 📊 GitHub Analytics
+<img src="./profile/streak.svg" alt="Streak" width="98%">
+
 <p align="left">
   <img src="./profile/stats.svg" alt="Stats" width="48%">
   <img src="./profile/top-langs.svg" alt="Top Langs" width="48%">
 </p>
-
-<img src="./profile/streak.svg" alt="Streak" width="98%">
 
 ### 🐍 Contribution History
 

@@ -32,9 +32,9 @@ jobs:
         with:
           card: top-langs
           # layout=compact? User wants height match. Stats has 3 lines (Commits, PRs, Issues).
-          # Langs has bar + list. 5 langs might be similar height.
           # Added exclude_repo for pinned fork if needed, but for now relying on default.
-          options: username=${{ github.repository_owner }}&langs_count=5&count_private=true&theme=dracula
+          # Reduce langs_count to 4 to try and match height with the shorter stats card
+          options: username=${{ github.repository_owner }}&langs_count=4&count_private=true&theme=dracula
           path: profile/top-langs.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
