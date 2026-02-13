@@ -1,12 +1,15 @@
 name: Update README cards
 
+
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 * * * *"→ Runs every hour
+
   workflow_dispatch:
+
 
 jobs:
   build:
@@ -16,15 +19,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+
       # 1. Top Langs - Compact multi-column layout with ALL forks excluded
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
           # Exclude all forks provided by the user
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=10&count_private=true&theme=dracula&exclude_repo=gwaslab,gsMap,Bibliometric-Analysis-With-Me,outRun,RETFound_MAE,github-readme-stats,TwoSampleMR,MungeSumstats_ModifedLocalChain,TwoSampleMR_pipeline
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=10&count_private=true&theme=dracula&exclude_repo=gwaslab,gsMap,Bibliometric-Analysis-With-Me,outRun,RETFound_MAE,github-readme-stats,TwoSampleMR,MungeSumstats_ModifedLocalChain,TwoSampleMR_pipeline,VKH2024,bdrv
           path: profile/top-langs.svg
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+
 
       # 2. Streak Stats
       - name: Generate streak stats
@@ -33,6 +38,7 @@ jobs:
           # Using dracula theme, consistent with other cards
           # Note: Privacy of these stats depends on the "Include private contributions on my profile" setting in GitHub user settings.
           curl -fL -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=dracula&hide_border=true" || echo "Failed to fetch streak stats"
+
 
       # 3. Snake Animation
       - name: Generate snake animation
@@ -44,6 +50,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
+
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
@@ -51,3 +58,4 @@ jobs:
           git add profile/*.svg
           git commit -m "style: Remove Stats card and exclude all forks from Top Langs" || exit 0
           git push
+
