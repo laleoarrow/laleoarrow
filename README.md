@@ -2,8 +2,12 @@
     <img src="./profile/streak.svg?v=20260213" alt="Streak" width="100%" />
 </div>
 
+<<<<<<< HEAD
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=428AE0&background=282A3500&vCenter=true&repeat=false&width=300&lines=%F0%9F%91%8B+Hi+there%2C+I'm+Lu+Ao!)](https://git.io/typing-svg)
+=======
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=3B8EEA&background=01162700&vCenter=true&repeat=false&width=300&lines=%F0%9F%91%8B+Hi+there%2C+I'm+Lu+Ao!)](https://git.io/typing-svg)
+>>>>>>> fc66dd9 (chore: update theme to Winter is Coming style)
 - 🔬 I'm a researcher studying the genetics of uveitis
 - 🧬 Our team do GWAS and AI application
 
@@ -23,8 +27,12 @@
   <img src="./profile/snake.svg" alt="Snake" width="100%" />
 </div>
 
+<<<<<<< HEAD
 
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=428AE0&background=282A3500&vCenter=true&repeat=false&width=300&lines=%F0%9F%93%AE+Contact)](https://git.io/typing-svg)
+=======
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=3B8EEA&background=01162700&vCenter=true&repeat=false&width=300&lines=%F0%9F%93%AE+Contact)](https://git.io/typing-svg)
+>>>>>>> fc66dd9 (chore: update theme to Winter is Coming style)
 
 
 <div align="left">

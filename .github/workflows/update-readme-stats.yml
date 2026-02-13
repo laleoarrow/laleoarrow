@@ -19,14 +19,15 @@ jobs:
       - name: Generate streak stats
         run: |
           mkdir -p profile
-          curl -fL -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=dracula&hide_border=true&timezone=Asia/Shanghai&cache_seconds=1800" || echo "Failed to fetch streak stats"
+          # Added timestamp to force cache bust and ensure git detects a change
+          curl -fL -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&background=011627&border=3b8eea&stroke=3b8eea&ring=3b8eea&fire=3b8eea&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=3b8eea&sideLabels=3b8eea&dates=a9b7c6&hide_border=true&timezone=Asia/Shanghai&cache_seconds=1800&timestamp=${{ github.run_id }}" || echo "Failed to fetch streak stats"
 
       - name: Generate snake animation
         uses: platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            profile/snake.svg?color_snake=#ff79c6&color_dots=#282a36,#ff79c6,#bd93f9,#8be9fd,#50fa7b
+            profile/snake.svg?color_snake=#00e5ff&color_dots=#011627,#243b55,#4d7c9d,#76bdd5,#9efdff
         env:
           GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
@@ -35,5 +36,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/*.svg
-          git commit -m "style: update snake colors and streak settings" || exit 0
+          git commit -m "style: force update streak stats" || exit 0
           git push
