@@ -1,6 +1,9 @@
 name: Update README cards
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
@@ -29,7 +32,8 @@ jobs:
         run: |
           mkdir -p profile
           # Using dracula theme, consistent with other cards
-          curl -fL -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=dracula&hide_border=true"
+          # Note: Privacy of these stats depends on the "Include private contributions on my profile" setting in GitHub user settings.
+          curl -fL -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=dracula&hide_border=true" || echo "Failed to fetch streak stats"
 
       # 3. Snake Animation
       - name: Generate snake animation
