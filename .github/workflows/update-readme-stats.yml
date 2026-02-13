@@ -27,7 +27,7 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            profile/snake.svg?color_snake=#00e5ff&color_dots=#011627,#243b55,#4d7c9d,#76bdd5,#9efdff
+            profile/snake.svg?color_snake=#00d8ff&color_dots=#162c4c,#3c7dd9,#4da6ff,#90cfff,#e6f6ff
         env:
           GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
