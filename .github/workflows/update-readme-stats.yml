@@ -19,23 +19,23 @@ jobs:
       - name: Generate streak stats
         run: |
           mkdir -p profile
-          # Added timestamp to force cache bust and ensure git detects a change
           curl -fL -o profile/streak.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&background=011627&border=3b8eea&stroke=3b8eea&ring=3b8eea&fire=3b8eea&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=3b8eea&sideLabels=3b8eea&dates=a9b7c6&hide_border=true&timezone=Asia/Shanghai&cache_seconds=1800&timestamp=${{ github.run_id }}" || echo "Failed to fetch streak stats"
 
       - name: Generate snake animation
-        uses: platane/snk@v3
+        uses: platane/snk@v3.4.1
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             profile/snake.svg?color_snake=#518ce3&color_dots=#162c4c,#3c7dd9,#518ce3,#82b1ff,#e0f2f1
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
 
-      - name: Commit cards
+      - name: Push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/*.svg
-          git commit -m "style: force update streak stats" || exit 0
-          git pull --rebase origin main
+          git diff --quiet && git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "style: update readme cards"
+          git pull --rebase --autostash origin main
           git push
