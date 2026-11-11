@@ -22,7 +22,7 @@
   <img src="./profile/snake.svg?v=20260213" alt="Snake" width="100%" />
 </div>
 
-# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=3B8EEA&background=01162700&vCenter=true&repeat=false&width=300&lines=%F0%9F%93%AE+Contact)](https://git.io/typing-svg)
+### 📮 Contact
 
 
 <div align="left">
